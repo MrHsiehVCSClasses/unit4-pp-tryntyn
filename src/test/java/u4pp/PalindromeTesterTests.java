@@ -74,21 +74,18 @@ class PalindromeTesterTests {
         assertFalse(PalindromeTester.isPalindrome("thi@@isIsNot       a Palindrome"));
     }
 
-    // TODO: test specifically for happy path looping
-    // TODO: test for bad input in y/n
-    // TODO: test for given palindrome
-    // TODO: test for non-palindrome
 
-    @Test
-    void execute_whenCalled_executesTheLoopsCorrectly() throws Exception {
-        int timesExecuted = 6;
-        withTextFromSystemIn("ask;ljasd", "y", "racecar", "Y", "monkey", "peanut", "n").execute(() -> {
-            String output = tapSystemOutNormalized(() -> {
-                Scanner sc = new Scanner(System.in);
-                PalindromeTester.execute(sc);
-            });
-            assertEquals(timesExecuted, output.split("\n").length);
-            // also assert num times "palindrome" is detected. 
-        });
-    }
+
+    // @Test
+    // void execute_whenCalled_executesTheLoopsCorrectly() throws Exception {
+    //     int timesExecuted = 6;
+    //     withTextFromSystemIn("ask;ljasd", "y", "racecar", "Y", "monkey", "peanut", "n").execute(() -> {
+    //         String output = tapSystemOutNormalized(() -> {
+    //             Scanner sc = new Scanner(System.in);
+    //             PalindromeTester.execute(sc);
+    //         });
+    //         assertEquals(timesExecuted, output.split("\n").length);
+    //         // also assert num times "palindrome" is detected. 
+    //     });
+    // }
 }
